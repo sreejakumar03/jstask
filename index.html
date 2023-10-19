@@ -1,0 +1,69 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>sign in and sin up form</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+   <div class="container">
+      <div class="form-box">
+         <h1 id="title">Sign up</h1>
+         <form action="index1.html">
+            <div class="input-group">
+               <div class="input-field" id="nameField">
+                  <i class="bi bi-person-fill"></i>
+                  <input type="text" placeholder="Name">
+
+             </div>
+               <div class="input-field">
+                  <i class="bi bi-envelope-fill"></i>
+                     <input type="email" placeholder="email">
+             </div>
+         
+                <div class="input-field">
+                  <i class="bi bi-bag-fill"></i>
+                  <input type="password"  placeholder="password">
+            </div>
+                  <p>lost password<a href="#">Click Here!</a></p>
+             
+            <div class="btn-field">
+               <button type="submit" id="Signup">Sign up</button>
+               <button type="submit" id="Login" class="disable">Login</button>
+               
+            </div>
+         </form>
+      </div>
+
+   </div>
+   
+  
+
+
+   <script> 
+     let Signup = document.getElementById("Signup");
+      let Login = document.getElementById("Login");
+      let nameField = document.getElementById("nameField");
+      let title = document.getElementById("title");
+      
+      
+      Login.onclick = function(){
+         nameField.style.maxHeight = "0";
+         title.innerHTML = "Login";
+         Signup.classList.add("disable");
+         Lognin.classList.remove("disable");
+      }
+      Signup.onclick = function(){
+         nameField.style.maxHeight = "60px";
+         title.innerHTML = "Sign up";
+         Signup.classList.remove("disable");
+         Login.classList.add("disable");
+      }
+      
+    
+   </script>
+   
+</body>
+</html>
